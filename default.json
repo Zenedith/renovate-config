@@ -1,0 +1,23 @@
+{
+  "gradle": {
+    "enabled": true
+  },
+  "extends": [
+    "config:base",
+    ":timezone(Europe/Warsaw)"
+  ],
+  "packageRules": [
+    {
+      "packagePatterns": [
+        "*"
+      ],
+      "excludePackagePatterns": [
+        "com.github.ben-manes.versions:com.github.ben-manes.versions.gradle.plugin",
+        "org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin"
+      ],
+      "enabled": false
+    }
+  ],
+  "timezone": "Europe/Warsaw",
+  "commitMessagePrefix": "ZENE-1209 "
+}
