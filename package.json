@@ -1,0 +1,52 @@
+{
+  "author": "Zenedith",
+  "bugs": {
+    "url": "https://github.com/Zenedith/renovate-config"
+  },
+  "description": "Zenedith presets for Renovate",
+  "devDependencies": {
+    "renovate": "^22.11.0",
+    "standard-version": "^8.0.2"
+  },
+  "files": [],
+  "homepage": "https://github.com/Zenedith/renovate-config",
+  "license": "MIT",
+  "name": "@Zenedith/renovate-config",
+  "renovate-config": {
+    "default": {
+      "gradle": {
+        "enabled": true
+      },
+      "extends": [
+        "config:base",
+        ":timezone(Europe/Warsaw)"
+      ],
+      "packageRules": [
+        {
+          "packagePatterns": [
+            "*"
+          ],
+          "excludePackagePatterns": [
+            "com.github.ben-manes.versions:com.github.ben-manes.versions.gradle.plugin",
+            "org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin"
+          ],
+          "enabled": false
+        }
+      ],
+      "timezone": "Europe/Warsaw",
+      "commitMessagePrefix": "ZENE-1209 "
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zenedith/renovate-config.git"
+  },
+  "resolutions": {
+    "minimist": "^1.2.5"
+  },
+  "scripts": {
+    "release": "standard-version",
+    "test": "renovate-config-validator"
+  },
+  "version": "1.0.0"
+}
